@@ -7,26 +7,13 @@
                 <li class="sidebar-brand">
                     <a href="#home"><span class="fa fa-home solo">Home</span></a>
                 </li>
-                <li>
-                    <a href="#anch1" data-scroll>
-                        <span class="fa fa-anchor solo">Anchor 1</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#anch2" data-scroll>
-                        <span class="fa fa-anchor solo">Anchor 2</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#anch3" data-scroll>
-                        <span class="fa fa-anchor solo">Anchor 3</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#anch4" data-scroll>
-                        <span class="fa fa-anchor solo">Anchor 4</span>
-                    </a>
-                </li>
+                <% @profile['experiences'].each_with_index do |experience, index| %>
+                    <li>
+                        <a href="#anch<%= index %>" data-scroll>
+                            <span class="fa fa-anchor solo"><%= experience['organisation'] %></span>
+                        </a>
+                    </li>
+                <% end %>
             </ul>
         </nav>
     </div>
@@ -37,60 +24,53 @@
             <h1 id="home">
                 <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
                 </a>
-                Resume
+                <%= @profile['name'] %>
             </h1>
         </div>
 
         <div class="container">
             <ul class="timeline">
-                <li id="anch1">
-                  <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                      <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 21 April 2014 to Current</small></p>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                    </div>
-                  </div>
-                </li>
-                <li id="anch2" class="timeline-inverted">
-                  <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                      <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 17 January 2013 to 20 April 2014</small></p>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                      <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
-                    </div>
-                  </div>
-                </li>
-                <li id="anch3">
-                  <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                      <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 1 August 2011 to 16 January 2013</small></p>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                    </div>
-                  </div>
-                </li>
-                <li id="anch4" class="timeline-inverted">
-                  <div class="timeline-panel">
-                    <div class="timeline-heading">
-                      <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                      <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 February 2009 to 16 July 2011</small></p>
-                    </div>
-                    <div class="timeline-body">
-                      <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-                    </div>
-                  </div>
-                </li>
+                <% @profile['experiences'].each_with_index do |experience, index| %>
+                    <% if index.odd? %>
+                        <li id="anch<%= index %>" class="timeline-inverted">
+                    <% else %>
+                        <li id="anch<%= index %>">
+                    <% end %>
+                        <% icon = experience['icon'] %>
+                        <% if icon %>
+                            <div class="timeline-badge <%= icon['bootstrap_state'] %>">
+                                <i class="fa fa-<%= icon['fontawesome_class'] %>"></i>
+                            </div>
+                        <% else %>
+                            <div class="timeline-badge">
+                                <i class="fa fa-bookmark"></i>
+                            </div>
+                        <% end %>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title"><%= experience['organisation'] %></h4>
+                                    <% if experience['start_date'] && experience['end_date'] %>
+                                        <p>
+                                            <small class="text-muted">
+                                                <i class="glyphicon glyphicon-time"></i>
+                                                <%= experience['start_date'] %> to <%= experience['end_date'] %>
+                                            </small>
+                                        </p>
+                                    <% elsif experience['start_date'] && ! experience['end_date'] %>
+                                        <p>
+                                            <small class="text-muted">
+                                                <i class="glyphicon glyphicon-time"></i>
+                                                <%= experience['start_date'] %> to Current
+                                            </small>
+                                        </p>
+                                    <% end %>
+                            </div>
+                            <div class="timeline-body">
+                                <p><%= experience['description'] %></p>
+                            </div>
+                        </div>
+                    </li>
+                <% end %>
             </ul>
         </div>
 

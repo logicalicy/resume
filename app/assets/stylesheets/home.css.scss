@@ -1,7 +1,8 @@
-$sidebar-nav-width: 250px;
+$sidebar-wrapper-width: 230px;
+$sidebar-nav-width: $sidebar-wrapper-width - 20px;
 
 #wrapper {
-  padding-left: $sidebar-nav-width;
+  padding-left: $sidebar-wrapper-width;
   transition: all 0.4s ease 0s;
   &.active {
     padding-left: 0;
@@ -12,9 +13,9 @@ $sidebar-nav-width: 250px;
 }
 
 #sidebar-wrapper {
-  margin-left: -$sidebar-nav-width;
-  left: $sidebar-nav-width;
-  width: $sidebar-nav-width;
+  margin-left: -$sidebar-wrapper-width;
+  left: $sidebar-wrapper-width;
+  width: $sidebar-wrapper-width;
   background: #000;
   position: fixed;
   height: 100%;
@@ -49,7 +50,6 @@ $sidebar-nav-width: 250px;
       color: #999999;
       display: block;
       text-decoration: none;
-      padding-left: 60px;
       span:before {
         position: absolute;
         left: 0;
@@ -111,10 +111,10 @@ $sidebar-nav-width: 250px;
 
   #wrapper.active {
     position: relative;
-    left: $sidebar-nav-width;
+    left: $sidebar-wrapper-width;
     #sidebar-wrapper {
-      left: $sidebar-nav-width;
-      width: $sidebar-nav-width;
+      left: $sidebar-wrapper-width;
+      width: $sidebar-wrapper-width;
       transition: all 0.4s ease 0s;
     }
   }
