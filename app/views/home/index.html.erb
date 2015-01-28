@@ -6,7 +6,7 @@
             <ul class="sidebar-nav nav">
                 <li>
                     <span class="avatar">
-                        <img src="<%= '/assets/' + @profile['image'] %>" width="128px">
+                        <img src="<%= '/assets/' + @profile['avatar'] %>" width="128px">
                     </span>
                 </li>
                 <% @profile['experiences'].each_with_index do |experience, index| %>
@@ -78,9 +78,6 @@
     </div>
 
     <script type="text/javascript">
-
-    /*Scroll Spy*/
-    $('body').scrollspy({ target: '#spy', offset:80});
 
     /*Smooth link animation*/
     $('a[href*=#]:not([href=#])').click(function() {

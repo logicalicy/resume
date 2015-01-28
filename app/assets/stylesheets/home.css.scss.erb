@@ -1,5 +1,12 @@
+<% file = File.read(Rails.root.join("app/assets/config/profile.json")) %>
+<% @profile = JSON.parse(file) %>
+
 $sidebar-wrapper-width: 230px;
 $sidebar-nav-width: $sidebar-wrapper-width - 20px;
+$sidebar-background-color: <%= @profile['sidebar']['background_color'] ? @profile['sidebar']['background_color'] : '#000' %>;
+$sidebar-text-color: <%= @profile['sidebar']['text']['color'] ? @profile['sidebar']['text']['color'] : '#999999' %>;
+$sidebar-text-color-on-hover: <%= @profile['sidebar']['text']['color_on_hover'] ? @profile['sidebar']['text']['color_on_hover'] : '#FFF' %>;
+$sidebar-icon-color: <%= @profile['sidebar']['icon_color'] ? @profile['sidebar']['icon_color'] : '#41484c' %>;
 
 #wrapper {
   padding-left: $sidebar-wrapper-width;
@@ -10,7 +17,7 @@ $sidebar-nav-width: $sidebar-wrapper-width - 20px;
   margin-left: -$sidebar-wrapper-width;
   left: $sidebar-wrapper-width;
   width: $sidebar-wrapper-width;
-  background: #000;
+  background: $sidebar-background-color;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -49,13 +56,13 @@ $sidebar-nav-width: $sidebar-wrapper-width - 20px;
       }
     }
     a {
-      color: #999999;
+      color: $sidebar-text-color;
       display: block;
       text-decoration: none;
       span:before {
         position: absolute;
         left: 0;
-        color: #41484c;
+        color: $sidebar-icon-color;
         text-align: center;
         width: 20px;
         line-height: 18px;
@@ -74,9 +81,9 @@ $sidebar-nav-width: $sidebar-wrapper-width - 20px;
     font-size: 18px;
   }
   & > .sidebar-brand a {
-    color: #999999;
+    color: $sidebar-text-color;
     &:hover {
-      color: #fff;
+      color: $sidebar-text-color-on-hover;
       background: none;
     }
   }

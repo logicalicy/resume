@@ -11247,26 +11247,18 @@ button.close {
 .fa-meanpath:before {
   content: "\f20c";
 }
-/* line 4, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 9, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 #wrapper {
   padding-left: 230px;
   transition: all 0.4s ease 0s;
 }
-/* line 7, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
-#wrapper.active {
-  padding-left: 0;
-}
-/* line 9, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
-#wrapper.active #sidebar-wrapper {
-  left: 0;
-}
 
-/* line 15, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 14, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 #sidebar-wrapper {
   margin-left: -230px;
   left: 230px;
   width: 230px;
-  background: #000;
+  background: red;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -11274,12 +11266,12 @@ button.close {
   transition: all 0.4s ease 0s;
 }
 
-/* line 27, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 26, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 #page-content-wrapper {
   width: 100%;
 }
 
-/* line 36, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 35, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -11288,23 +11280,33 @@ button.close {
   margin: 0;
   padding: 0;
 }
-/* line 43, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 42, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav li {
   line-height: 40px;
   text-indent: 20px;
 }
-/* line 46, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 45, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav li.active {
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
 }
-/* line 49, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 48, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
+.sidebar-nav li .avatar {
+  position: relative;
+  left: 7.5%;
+}
+/* line 51, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
+.sidebar-nav li .avatar img {
+  margin: 10px 0;
+  border-radius: 50%;
+}
+/* line 56, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav li a {
-  color: #999999;
+  color: #5c1601;
   display: block;
   text-decoration: none;
 }
-/* line 53, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 60, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav li a span:before {
   position: absolute;
   left: 0;
@@ -11313,91 +11315,89 @@ button.close {
   width: 20px;
   line-height: 18px;
 }
-/* line 61, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 68, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav li a:hover {
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
 }
-/* line 64, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 71, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
   text-decoration: none;
 }
-/* line 69, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 76, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav > .sidebar-brand {
   height: 65px;
   line-height: 60px;
   font-size: 18px;
 }
-/* line 74, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 81, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav > .sidebar-brand a {
-  color: #999999;
+  color: #5c1601;
 }
-/* line 76, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 83, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
+  color: white;
   background: none;
 }
 
-/* line 83, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 90, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .content-header {
-  height: 65px;
-  line-height: 65px;
+  text-align: center;
 }
-/* line 86, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 92, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .content-header h1 {
-  margin: 0;
-  margin-left: 20px;
   line-height: 65px;
-  display: inline-block;
+  font-family: 'Lobster', cursive;
+  font-size: 64px;
 }
 
-/* line 94, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 99, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 #menu-toggle {
   text-decoration: none;
 }
 
-/* line 98, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 103, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .btn-menu {
   color: #000;
 }
 
 @media (max-width: 767px) {
-  /* line 104, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+  /* line 109, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
   #wrapper {
     padding-left: 0;
   }
 
-  /* line 108, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+  /* line 113, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
   #sidebar-wrapper {
     left: 0;
   }
 
-  /* line 112, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+  /* line 117, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
   #wrapper.active {
     position: relative;
     left: 230px;
   }
-  /* line 115, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+  /* line 120, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
   #wrapper.active #sidebar-wrapper {
     left: 230px;
     width: 230px;
     transition: all 0.4s ease 0s;
   }
 
-  /* line 122, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+  /* line 127, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
   #menu-toggle {
     display: inline-block;
     text-decoration: none;
     color: inherit;
   }
 }
-/* line 130, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 135, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline {
   list-style: none;
   padding: 20px 0 20px;
   position: relative;
 }
-/* line 134, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 139, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline:before {
   top: 0;
   bottom: 0;
@@ -11409,21 +11409,21 @@ button.close {
   margin-left: -1.5px;
 }
 
-/* line 145, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 150, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li {
   margin-bottom: 20px;
   position: relative;
 }
-/* line 148, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 153, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li:before, .timeline > li:after {
   content: " ";
   display: table;
 }
-/* line 152, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 157, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li:after {
   clear: both;
 }
-/* line 155, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 160, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li > .timeline-panel {
   width: 50%;
   float: left;
@@ -11435,23 +11435,23 @@ button.close {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
 
-/* line 167, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 172, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li.timeline-inverted + li:not(.timeline-inverted),
 .timeline > li:not(.timeline-inverted) + li.timeline-inverted {
   margin-top: -60px;
 }
 
-/* line 171, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 176, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li:not(.timeline-inverted) {
   padding-right: 90px;
 }
 
-/* line 175, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 180, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li.timeline-inverted {
   padding-left: 90px;
 }
 
-/* line 179, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 184, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li > .timeline-panel:before {
   position: absolute;
   top: 26px;
@@ -11463,7 +11463,7 @@ button.close {
   border-bottom: 15px solid transparent;
   content: " ";
 }
-/* line 190, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 195, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li > .timeline-panel:after {
   position: absolute;
   top: 27px;
@@ -11476,7 +11476,7 @@ button.close {
   content: " ";
 }
 
-/* line 202, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 207, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li > .timeline-badge {
   color: #fff;
   width: 50px;
@@ -11496,18 +11496,18 @@ button.close {
   border-bottom-left-radius: 50%;
 }
 
-/* line 220, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 225, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li.timeline-inverted > .timeline-panel {
   float: right;
 }
-/* line 222, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 227, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li.timeline-inverted > .timeline-panel:before {
   border-left-width: 0;
   border-right-width: 15px;
   left: -15px;
   right: auto;
 }
-/* line 228, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 233, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline > li.timeline-inverted > .timeline-panel:after {
   border-left-width: 0;
   border-right-width: 14px;
@@ -11515,39 +11515,39 @@ button.close {
   right: auto;
 }
 
-/* line 236, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 241, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline-badge.primary {
   background-color: #2e6da4 !important;
 }
-/* line 239, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 244, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline-badge.success {
   background-color: #3f903f !important;
 }
-/* line 242, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 247, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline-badge.warning {
   background-color: #f0ad4e !important;
 }
-/* line 245, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 250, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline-badge.danger {
   background-color: #d9534f !important;
 }
-/* line 248, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 253, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline-badge.info {
   background-color: #5bc0de !important;
 }
 
-/* line 252, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 257, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline-title {
   margin-top: 0;
   color: inherit;
 }
 
-/* line 257, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 262, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline-body > p, .timeline-body > ul {
   margin-bottom: 0;
 }
 
-/* line 261, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss */
+/* line 266, /Users/mario/git/resume/app/assets/stylesheets/home.css.scss.erb */
 .timeline-body > p + p {
   margin-top: 5px;
 }

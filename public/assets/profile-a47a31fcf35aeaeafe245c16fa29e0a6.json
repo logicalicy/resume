@@ -1,6 +1,14 @@
 {
     "name": "John Doe",
-    "image": "avatar.png",
+    "avatar": "avatar.png",
+    "sidebar": {
+        "background_color": "red",
+        "text": {
+            "color": "#5c1601",
+            "color_on_hover": "#FFF"
+        },
+        "icon_color": "#41484c"
+    },
     "experiences": [
         {
             "organisation": "Nintendo",
