@@ -5,11 +5,11 @@
         <nav id="spy">
             <ul class="sidebar-nav nav">
                 <li>
-                    <span class="avatar">
-                        <a href="#" data-scroll>
+                    <a href="#" data-scroll>
+                        <span class="avatar">
                             <img src="<%= '/assets/' + @profile['avatar'] %>" width="128px">
-                        </a>
-                    </span>
+                        </span>
+                    </a>
                 </li>
                 <% @profile['experiences'].each_with_index do |experience, index| %>
                     <li>
