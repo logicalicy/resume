@@ -6,7 +6,9 @@
             <ul class="sidebar-nav nav">
                 <li>
                     <span class="avatar">
-                        <img src="<%= '/assets/' + @profile['avatar'] %>" width="128px">
+                        <a href="#" data-scroll>
+                            <img src="<%= '/assets/' + @profile['avatar'] %>" width="128px">
+                        </a>
                     </span>
                 </li>
                 <% @profile['experiences'].each_with_index do |experience, index| %>
