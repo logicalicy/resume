@@ -46,6 +46,13 @@ $sidebar-nav-width: $sidebar-wrapper-width - 20px;
     &.active {
       @include white-backgound;
     }
+    .avatar {
+      position: relative;
+      left: 7.5%;
+      img {
+        margin: 10px 0;
+      }
+    }
     a {
       color: #999999;
       display: block;

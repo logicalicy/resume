@@ -4,8 +4,10 @@
     <div id="sidebar-wrapper" class="col-sm-4">
         <nav id="spy">
             <ul class="sidebar-nav nav">
-                <li class="sidebar-brand">
-                    <a href="#home"><span class="fa fa-home solo">Home</span></a>
+                <li>
+                    <span class="avatar">
+                        <img src="<%= '/assets/' + @profile['image'] %>" width="128px">
+                    </span>
                 </li>
                 <% @profile['experiences'].each_with_index do |experience, index| %>
                     <li>
