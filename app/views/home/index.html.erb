@@ -12,7 +12,8 @@
                 <% @profile['experiences'].each_with_index do |experience, index| %>
                     <li>
                         <a href="#anch<%= index %>" data-scroll>
-                            <span class="fa fa-anchor solo"><%= experience['organisation'] %></span>
+                            <% icon = experience['icon'] %>
+                            <span class="fa <%= icon ? 'fa-' + icon['fontawesome_class'] : 'fa-bookmark' %> solo"><%= experience['organisation'] %></span>
                         </a>
                     </li>
                 <% end %>
