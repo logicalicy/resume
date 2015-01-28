@@ -4,12 +4,6 @@ $sidebar-nav-width: $sidebar-wrapper-width - 20px;
 #wrapper {
   padding-left: $sidebar-wrapper-width;
   transition: all 0.4s ease 0s;
-  &.active {
-    padding-left: 0;
-    #sidebar-wrapper {
-      left: 0;
-    }
-  }
 }
 
 #sidebar-wrapper {
@@ -91,6 +85,7 @@ $sidebar-nav-width: $sidebar-wrapper-width - 20px;
 .content-header {
   height: 65px;
   line-height: 65px;
+  text-align: center;
   h1 {
     margin: 0;
     margin-left: 20px;

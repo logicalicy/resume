@@ -24,8 +24,6 @@
     <div id="page-content-wrapper" class="col-sm-8">
         <div class="content-header">
             <h1 id="home">
-                <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
-                </a>
                 <%= @profile['name'] %>
             </h1>
         </div>
@@ -79,11 +77,6 @@
     </div>
 
     <script type="text/javascript">
-    /*Menu-toggle*/
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("active");
-    });
 
     /*Scroll Spy*/
     $('body').scrollspy({ target: '#spy', offset:80});
