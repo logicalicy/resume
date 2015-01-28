@@ -83,14 +83,11 @@ $sidebar-nav-width: $sidebar-wrapper-width - 20px;
 }
 
 .content-header {
-  height: 65px;
-  line-height: 65px;
   text-align: center;
   h1 {
-    margin: 0;
-    margin-left: 20px;
     line-height: 65px;
-    display: inline-block;
+    font-family: 'Lobster', cursive;
+    font-size: 64px;
   }
 }
 
