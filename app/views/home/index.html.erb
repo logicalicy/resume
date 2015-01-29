@@ -16,11 +16,8 @@
                         <a href="#anch<%= index %>" data-scroll>
                             <% icon = experience['icon'] %>
                             <span class="fa <%= icon ? 'fa-' + icon['fontawesome_class'] : 'fa-bookmark' %> solo">
-                                <% if experience['responsibility'] %>
                                     <%= experience['responsibility'] %>
-                                <% else %>
                                     <%= experience['organisation'] %>
-                                <% end %>
                             </span>
                         </a>
                     </li>
