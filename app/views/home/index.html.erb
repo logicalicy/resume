@@ -25,13 +25,12 @@
 
     <!-- Page content -->
     <div id="page-content-wrapper" class="col-sm-8">
-        <div class="content-header">
-            <h1 id="home">
-                <%= @profile['name'] %>
-            </h1>
-        </div>
-
         <div class="container">
+            <div class="content-header">
+                <h1 id="home">
+                    <%= @profile['name'] %>
+                </h1>
+            </div>
             <ul class="timeline">
                 <% @profile['experiences'].each_with_index do |experience, index| %>
                     <% if index.odd? %>
