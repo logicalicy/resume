@@ -98,6 +98,10 @@ $sidebar-icon-color: <%= @profile['sidebar']['icon_color'] ? @profile['sidebar']
     font-family: 'Lobster', cursive;
     font-size: 64px;
   }
+  .profile_summary {
+    width: 520px;
+    margin: 0 auto;
+  }
 }
 
 #menu-toggle {
@@ -170,6 +174,12 @@ $sidebar-icon-color: <%= @profile['sidebar']['icon_color'] ? @profile['sidebar']
     position: relative;
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    & > .key_skills {
+      margin-top: 15px;
+      b {
+        margin-right: 5px;
+      }
+    }
   }
 }
 .timeline > li.timeline-inverted + li:not(.timeline-inverted),

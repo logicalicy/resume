@@ -30,6 +30,11 @@
                 <h1 id="home">
                     <%= @profile['name'] %>
                 </h1>
+                <% if @profile['personal_profile'] %>
+                <div class="personal_profile">
+                    <p><%= @profile['personal_profile'] %></p>
+                </div>
+                <% end %>
             </div>
             <ul class="timeline">
                 <% @profile['experiences'].each_with_index do |experience, index| %>
@@ -50,26 +55,42 @@
                         <% end %>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title"><%= experience['organisation'] %></h4>
-                                    <% if experience['start_date'] && experience['end_date'] %>
-                                        <p>
-                                            <small class="text-muted">
-                                                <i class="fa fa-clock-o"></i>
-                                                <%= experience['start_date'] %> to <%= experience['end_date'] %>
-                                            </small>
-                                        </p>
-                                    <% elsif experience['start_date'] && ! experience['end_date'] %>
-                                        <p>
-                                            <small class="text-muted">
-                                                <i class="fa fa-clock-o"></i>
-                                                <%= experience['start_date'] %> to Current
-                                            </small>
-                                        </p>
-                                    <% end %>
+                                <% if experience['organisation'] && experience['responsibility'] %>
+                                    <h4 class="timeline-title"><%= experience['responsibility'] %></h4>
+                                    <h5 class="timeline-title"><%= experience['organisation'] %></h5>
+                                <% elsif experience['responsibility'] %>
+                                    <h4 class="timeline-title"><%= experience['responsibility'] %></h4>
+                                <% elsif experience['organisation'] %>
+                                    <h4 class="timeline-title"><%= experience['organisation'] %></h4>
+                                <% end %>
+
+                                <% if experience['start_date'] && experience['end_date'] %>
+                                    <p>
+                                        <small class="text-muted">
+                                            <i class="fa fa-clock-o"></i>
+                                            <%= experience['start_date'] %> to <%= experience['end_date'] %>
+                                        </small>
+                                    </p>
+                                <% elsif experience['start_date'] && ! experience['end_date'] %>
+                                    <p>
+                                        <small class="text-muted">
+                                            <i class="fa fa-clock-o"></i>
+                                            <%= experience['start_date'] %> to Current
+                                        </small>
+                                    </p>
+                                <% end %>
                             </div>
                             <div class="timeline-body">
                                 <p><%= experience['description'] %></p>
                             </div>
+                            <% if experience['key_skills'] %>
+                                <div class="key_skills">
+                                <b>Key skills:</b>
+                                <% experience['key_skills'].each do |skill| %>
+                                    <span class="badge"><%= skill %></span>
+                                <% end %>
+                                </div>
+                            <% end %>
                         </div>
                     </li>
                 <% end %>
