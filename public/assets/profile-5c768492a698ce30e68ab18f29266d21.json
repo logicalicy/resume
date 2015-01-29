@@ -1,18 +1,18 @@
 {
-    "name": "John Doe",
+    "name": "Mario Hayashi",
     "avatar": "avatar.png",
     "sidebar": {
-        "background_color": "red",
+        "background_color": "#000",
         "text": {
-            "color": "#5c1601",
+            "color": "#999",
             "color_on_hover": "#FFF"
         },
-        "icon_color": "#41484c"
+        "icon_color": "#999"
     },
     "experiences": [
         {
-            "organisation": "Nintendo",
-            "start_date": "Dec 1 2014",
+            "organisation": "Example organisation",
+            "start_date": "Dec 2 2014",
             "description": "Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.",
             "icon": {
                 "fontawesome_class": "gamepad",
@@ -20,7 +20,7 @@
             }
         },
         {
-            "organisation": "Example organisation",
+            "organisation": "Another example",
             "start_date": "Mar 15 2013",
             "end_date": "Nov 30 2014",
             "description": "Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis."
