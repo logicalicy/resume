@@ -17,6 +17,9 @@
                             <% icon = experience['icon'] %>
                             <span class="fa <%= icon ? 'fa-' + icon['fontawesome_class'] : 'fa-bookmark' %> solo">
                                     <%= experience['responsibility'] %>
+                                    <% if experience['responsibility'] %>
+                                        <br/>
+                                    <% end %>
                                     <%= experience['organisation'] %>
                             </span>
                         </a>

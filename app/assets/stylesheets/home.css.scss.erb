@@ -8,14 +8,6 @@ $sidebar-text-color: <%= @profile['sidebar']['text']['color'] ? @profile['sideba
 $sidebar-text-color-on-hover: <%= @profile['sidebar']['text']['color_on_hover'] ? @profile['sidebar']['text']['color_on_hover'] : '#FFF' %>;
 $sidebar-icon-color: <%= @profile['sidebar']['icon_color'] ? @profile['sidebar']['icon_color'] : '#41484c' %>;
 
-.wordwrap {
-   white-space: pre-wrap;      /* CSS3 */
-   white-space: -moz-pre-wrap; /* Firefox */
-   white-space: -pre-wrap;     /* Opera <7 */
-   white-space: -o-pre-wrap;   /* Opera 7 */
-   word-wrap: break-word;      /* IE */
-}
-
 #wrapper {
   padding-left: $sidebar-wrapper-width;
   transition: all 0.4s ease 0s;
@@ -60,7 +52,7 @@ $sidebar-icon-color: <%= @profile['sidebar']['icon_color'] ? @profile['sidebar']
   padding: 0;
   li {
     line-height: 40px;
-    margin-indent: 20px;
+    margin-left: 20px;
     &.active {
       @include white-backgound;
     }
