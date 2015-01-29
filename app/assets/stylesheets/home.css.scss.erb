@@ -34,6 +34,15 @@ $sidebar-icon-color: <%= @profile['sidebar']['icon_color'] ? @profile['sidebar']
   background: rgba(255,255,255,0.2);
 }
 
+@mixin before_icon_span {
+  position: absolute;
+  left: 0;
+  color: $sidebar-icon-color;
+  text-align: center;
+  width: 20px;
+  line-height: 18px;
+}
+
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -58,12 +67,7 @@ $sidebar-icon-color: <%= @profile['sidebar']['icon_color'] ? @profile['sidebar']
       display: block;
       text-decoration: none;
       span:before {
-        position: absolute;
-        left: 0;
-        color: $sidebar-icon-color;
-        text-align: center;
-        width: 20px;
-        line-height: 18px;
+        @include before_icon_span;
       }
       &:hover {
         @include white-backgound;
