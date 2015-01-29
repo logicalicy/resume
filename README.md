@@ -40,6 +40,7 @@ Write everything you want your resume to show in `app/assets/config/profile.json
 
         {
             "name": "John Doe",
+            "personal_profile": "An description of yourself.",
             "avatar": "avatar.png",
             "sidebar": {
                 "background_color": "#000",
@@ -52,12 +53,16 @@ Write everything you want your resume to show in `app/assets/config/profile.json
             "experiences": [
                 {
                     "organisation": "Example organisation",
+                    "responsibility": "Example position",
                     "start_date": "Dec 2 2014",
                     "description": "Description.",
                     "icon": {
                         "fontawesome_class": "gamepad",
                         "bootstrap_state": "primary"
-                    }
+                    },
+                    "key_skills": [
+                        "Linux", "Apache", "MySQL", "PHP"
+                    ]
                 },
                 {
                     "organisation": "Another example",
